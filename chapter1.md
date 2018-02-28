@@ -1,46 +1,44 @@
----
-title: Template Chapter 1
-description: This is a template chapter.
----
+	--- type:NormalExercise lang:r xp:100 skills:1
+	## Calculate the mean
 
-## Ex 1.1
+	In this exercise, you'll be calculating a mean.
 
-```yaml
-type: NormalExercise
-lang: r
-xp: 100
-skills: 1
-key: 945a51e93f
-```
+	*** =instructions
+	- Create a variable `m`, equal to the mean of the numbers 0 up to 9.
+	- Print out `m`.
 
-Do some data science.
+	*** =hint
+	- You can use `mean(0:9)` to calculate `m`.
+	- To print out a variable, simply write the variable name on a new line.
 
-`@instructions`
+	*** =pre_exercise_code
+	```{r}
+	# no pre exercise code required
+	```
+
+	*** =sample_code
+	```{r}
+	# Calculate the mean of all single digit numbers and assign the result to 'm'
 
 
-`@hint`
+	# print the result to the console
 
+	```
 
-`@pre_exercise_code`
+	*** =solution
+	```{r}
+	# Calculate the mean of all single digit numbers and assign the result to 'm'
+	m <- mean(0:9)
 
-```{r}
+	# print the result to the console
+	m
+	```
 
-```
-
-`@sample_code`
-
-```{r}
-
-```
-
-`@solution`
-
-```{r}
-
-```
-
-`@sct`
-
-```{r}
-
-```
+	*** =sct
+	```{r}
+	test_function("mean", args = "x")
+	test_object("m")
+	test_output_contains("m")
+	test_error()
+	success_msg("Great job!")
+	```
